@@ -1,3 +1,5 @@
+from datetime import datetime as dt
+
 # Function creates a new txt file to contain the data
 def create_txt(file_name: str):
     file_handle = open(file_name, "w", encoding="utf-16")

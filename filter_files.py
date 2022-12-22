@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 import variables
 import utils
-import check
+import corruption_checks
 
 
 
@@ -40,6 +40,6 @@ def list_files(path):
                         tm.ctime(os.path.getmtime(file)), "%a %b %d %H:%M:%S %Y"
                     ))
                     and utils.is_not_tmp(file)
-                    and check.is_corrupted(file)
+                    and corruption_checks.is_corrupted(file)
                 ):
                     file_handle.write(file + "\n")
